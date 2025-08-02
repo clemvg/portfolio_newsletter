@@ -31,16 +31,37 @@ Automated newsletter delivered on a recurring basis, tailored to your portfolio 
 
 
 ## Setup
+
+### Prerequisites
+- Python 3.11+ installed on your system
+
+### Initial Setup
+```bash
+# Navigate to the app directory
+cd app
+
+# Create virtual environment
+python3.11 -m venv venv
+
+# Activate virtual environment
+source venv/bin/activate
+
+# Install production dependencies
+pip install -r requirements.txt
+
+# Install development dependencies (optional)
+pip install -r requirements-dev.txt
+```
+
+### Daily Usage
 ```bash
 # Activate virtual environment
 source venv/bin/activate
 
-# Install dependencies with UV (when pyproject.toml is added)
-uv sync
-
-# Or install specific packages
-uv add package-name
+# Deactivate when done
+deactivate
 ```
+
 
 ## Environment Variables
 - `TICKERS`: Comma-separated list of stock tickers
