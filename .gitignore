@@ -14,6 +14,7 @@ venv/
 crash.log
 *.tfvars
 *.tfvars.local
+.terraform.lock.hcl
 
 # IDEs
 .vscode/
