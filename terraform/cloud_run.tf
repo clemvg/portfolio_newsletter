@@ -10,6 +10,11 @@ resource "google_cloud_run_v2_job" "portfolio_newsletter" {
       containers {
         image = local.image_path
 
+        env {
+          name  = "TICKERS"
+          value = var.tickers
+        }
+
 
       }
       service_account = google_service_account.service_account.email

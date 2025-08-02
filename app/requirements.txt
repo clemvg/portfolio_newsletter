@@ -1,3 +1,2 @@
-# This file lists the Python dependencies for the application.
-# For now, it is empty because we only use standard libraries.
-# As you add packages (e.g., pandas, requests), add them here.
+python-dotenv==1.1.1
+requests==2.31.0

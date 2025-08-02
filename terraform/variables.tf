@@ -26,3 +26,9 @@ variable "environment" {
   default     = "dev"
 }
 
+variable "tickers" {
+  description = "A comma-separated list of stock tickers for the newsletter."
+  type        = string
+  default     = "AAPL,GOOGL,MSFT"
+}
+
