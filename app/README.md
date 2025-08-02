@@ -2,13 +2,6 @@
 
 A scheduled Cloud Run Job that generates a newsletter for a list of stock tickers.
 
-## Prerequisites
-
-- Python 3.11+
-- pip
-- Docker
-- Terraform
-
 ## Local Development
 
 ### 1. Setup
