@@ -15,6 +15,21 @@ resource "google_cloud_run_v2_job" "portfolio_newsletter" {
           value = var.tickers
         }
 
+        env {
+          name  = "EMAIL_RECIPIENTS"
+          value = var.email_recipients
+        }
+
+        env {
+          name  = "GMAIL_USER"
+          value = var.gmail_user
+        }
+
+        env {
+          name  = "GMAIL_APP_PASSWORD"
+          value = var.gmail_app_password
+        }
+
 
       }
       service_account = google_service_account.service_account.email
