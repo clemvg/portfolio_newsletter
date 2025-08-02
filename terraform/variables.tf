@@ -32,3 +32,19 @@ variable "tickers" {
   default     = "AAPL,GOOGL,MSFT"
 }
 
+variable "email_recipients" {
+  description = "A comma-separated list of email addresses to send the newsletter to."
+  type        = string
+}
+
+variable "gmail_user" {
+  description = "Gmail address to send emails from."
+  type        = string
+}
+
+variable "gmail_app_password" {
+  description = "Gmail App Password for authentication. Generate at https://myaccount.google.com/apppasswords"
+  type        = string
+  sensitive   = true
+}
+

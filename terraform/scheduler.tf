@@ -4,7 +4,7 @@
 resource "google_cloud_scheduler_job" "nightly" {
   name      = "${var.app_name}-trigger-${var.environment}"
   region    = var.region
-  # schedule  = "*/1 * * * *" # Runs every 2 minutes for testing
+  # schedule  = "*/1 * * * *" # Runs every 1 minute for testing
   schedule  = "0 3 * * *" # Runs every day at 3:00 AM
   time_zone = "Europe/Brussels"
 
