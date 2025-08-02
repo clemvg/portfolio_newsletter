@@ -1,6 +1,6 @@
 # Deployment and Testing Guide
 
-This guide will walk you through deploying and testing your nightly job. All commands should be run from the **root directory** of the project.
+This guide will walk you through deploying and testing your portfolio newsletter Cloud Run Job. The application runs as a scheduled batch job that generates newsletters for configured stock tickers. All commands should be run from the **root directory** of the project.
 
 ## Prerequisites
 
@@ -56,9 +56,9 @@ Before you begin, make sure you have the following tools installed:
     ```
 
 4.  **Build the Docker Image:**
-    This command builds your Docker image using the `Dockerfile` in the project root.
+    This command builds your Docker image using the `Dockerfile` in the `app/` directory.
     ```bash
-    docker build -t $(terraform -chdir=terraform output -raw image_path) .
+    docker build -t $(terraform -chdir=terraform output -raw image_path) app/
     ```
 
 5.  **Push the Docker Image:**
