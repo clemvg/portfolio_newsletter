@@ -24,7 +24,23 @@ Before you begin, make sure you have the following tools installed:
     gcloud config set project your-gcp-project-id
     ```
 
-3.  **Enable Required APIs:**
+3.  **Configure Terraform Variables (Optional but Recommended):**
+    Create a `terraform/terraform.tfvars` file to avoid manual input during deployment. This file should contain your actual values:
+    ```bash
+    # terraform/terraform.tfvars
+    project_id = "your-gcp-project-id"
+    region = "europe-west1"
+    image_name = "portfolio-newsletter-image-v_0"
+    app_name = "portfolio-newsletter"
+    environment = "dev"
+    tickers = "AAPL,GOOGL,MSFT"
+    email_recipients = "your-email@example.com"
+    gmail_user = "your-gmail@gmail.com"
+    gmail_app_password = "your-app-password-here"
+    ```
+    **Note:** Replace the placeholder values with your actual Gmail credentials and email addresses.
+
+4.  **Enable Required APIs:**
     This command enables all the necessary services for the project.
     ```bash
     gcloud services enable \
@@ -47,10 +63,11 @@ Before you begin, make sure you have the following tools installed:
     ```bash
     terraform -chdir=terraform apply
     ```
+    **Note:** If you created a `terraform.tfvars` file, Terraform will automatically use those values. Otherwise, you'll be prompted to enter the variable values manually.
     Review the plan and type `yes` when prompted.
 
-3.  **Configure Docker Authentication:**
-    This command tells your local Docker client how to authenticate with your private Artifact Registry.
+3.  **Configure Docker Authentication (One-time setup):**
+    This command tells your local Docker client how to authenticate with your private Artifact Registry. This only needs to be run once per machine.
     ```bash
     gcloud auth configure-docker $(terraform -chdir=terraform output -raw region)-docker.pkg.dev
     ```
@@ -59,6 +76,10 @@ Before you begin, make sure you have the following tools installed:
     This command builds your Docker image using the `Dockerfile` in the `app/` directory.
     ```bash
     docker build -t $(terraform -chdir=terraform output -raw image_path) app/
+    ```
+    Or if you are on an Apple silicon chip, Cloud Run requires amd64/linux architecture so build with:
+    ```bash
+    docker build --platform linux/amd64 -t $(terraform -chdir=terraform output -raw image_path) app/
     ```
 
 5.  **Push the Docker Image:**
@@ -74,6 +95,7 @@ Before you begin, make sure you have the following tools installed:
     ```bash
     terraform -chdir=terraform apply
     ```
+    **Note:** Terraform will automatically use values from `terraform.tfvars` if present, or prompt for manual input if not.
     Review the (much smaller) plan and type `yes` when prompted.
 
 ## Step 4: Test the Cloud Run Job

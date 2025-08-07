@@ -5,7 +5,7 @@ Simple test script for the price change detection functionality
 import sys 
 import os 
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-from experiments.price_change_detection import analyze_stock_prices
+from app.experiments.stock_prices.price_change_detection import analyze_stock_prices
 
 def test_price_detection():
     """Test the price change detection with some popular stocks"""

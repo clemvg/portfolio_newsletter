@@ -1,7 +1,7 @@
 import logging
 
 from config import EMAIL_RECIPIENTS, TICKERS
-from src import core
+from src import core # only needed to import core from src
 
 logging.basicConfig(level=logging.INFO)
 
