@@ -1,7 +1,9 @@
+"""Main script to run the newsletter generation job."""
+
 import logging
 
 from config import EMAIL_RECIPIENTS, TICKERS
-from src import core # only needed to import core from src
+from src import core
 
 logging.basicConfig(level=logging.INFO)
 
@@ -13,7 +15,9 @@ if __name__ == "__main__":
         exit(1)
 
     if not EMAIL_RECIPIENTS:
-        logging.error("EMAIL_RECIPIENTS environment variable is not set. Exiting.")
+        logging.error(
+            "EMAIL_RECIPIENTS environment variable is not set. Exiting."
+        )
         exit(1)
 
     # Parse environment variables

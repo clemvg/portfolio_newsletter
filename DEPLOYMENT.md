@@ -109,3 +109,38 @@ You can trigger the job manually to test it immediately.
 
 2.  **Check the Logs:**
     Go to the Cloud Run section of the Google Cloud Console, find your job (e.g., `portfolio-newsletter-job-dev`), and inspect its logs. You should see the output from the Python script, including "Job finished."
+
+
+## Step 5: Destroy the Infrastructure
+
+When you are done, you can remove all Terraform-managed resources (Cloud Run Job, Scheduler, Artifact Registry repository, IAM bindings, etc.). Run this from the project root:
+
+1. Destroy with Terraform:
+    ```bash
+    terraform -chdir=terraform destroy
+    ```
+    Review the plan and type `yes` when prompted. To skip the prompt, use:
+    ```bash
+    terraform -chdir=terraform destroy -auto-approve
+    ```
+
+2. Optional local cleanup:
+    - Remove the locally built Docker image tag used for deployment:
+      ```bash
+      docker rmi $(terraform -chdir=terraform output -raw image_path) || true
+      ```
+    - If you want a completely clean local Terraform directory (not required):
+      ```bash
+      rm -rf terraform/.terraform terraform/terraform.tfstate*
+      ```
+
+3. Optional: disable previously enabled APIs (you can re-enable later if needed):
+    ```bash
+    gcloud services disable \
+      run.googleapis.com \
+      cloudscheduler.googleapis.com \
+      artifactregistry.googleapis.com \
+      cloudbuild.googleapis.com \
+      --force
+    ```
+
