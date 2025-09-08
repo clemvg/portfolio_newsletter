@@ -2,6 +2,8 @@
 
 This guide will walk you through deploying and testing your portfolio newsletter Cloud Run Job. The application runs as a scheduled batch job that generates newsletters for configured stock tickers. All commands should be run from the **root directory** of the project.
 
+Note that this project is deployed on a sandbox GCP project sponsored by ML6.
+
 ## Prerequisites
 
 Before you begin, make sure you have the following tools installed:
@@ -88,6 +90,8 @@ Before you begin, make sure you have the following tools installed:
     docker push $(terraform -chdir=terraform output -raw image_path)
     ```
 
+    Your image can now be seen in your `Artifact Registry`.
+
 ## Step 3: Deploy the Cloud Run Job
 
 1.  **Apply Terraform Again:**
@@ -108,7 +112,7 @@ You can trigger the job manually to test it immediately.
     ```
 
 2.  **Check the Logs:**
-    Go to the Cloud Run section of the Google Cloud Console, find your job (e.g., `portfolio-newsletter-job-dev`), and inspect its logs. You should see the output from the Python script, including "Job finished."
+    Go to the Cloud Run section of the Google Cloud Console, find under the `Jobs` section your job (e.g., `portfolio-newsletter-job-dev`), and inspect its logs. You should see the output from the Python script, including "Job finished."
 
 
 ## Step 5: Destroy the Infrastructure
