@@ -108,6 +108,8 @@ See deployment documentation in the parent directory for Cloud Run setup and con
 
 ## Todos
 
+- Architecture diagram of my different components (GCP), to put in readme
+- Implement content fetching via agents
 - Database if several users with different ticker list
 - User interface to update ticker list
 - Tests 
