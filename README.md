@@ -22,27 +22,19 @@ portfolio_newsletter/
 ├── app/                                     # Main application directory
 │   ├── src/                                 # Source code
 │   │   ├── core.py                          # Main application logic
+│   │   ├── data/                            # Data modules
+│   │   │   ├── news_data.py                 # News data fetching
+│   │   │   └── stock_data.py                # Stock data fetching
 │   │   ├── io/                              # Input/Output modules
 │   │   │   └── email.py                     # Email functionality
 │   │   └── utils/                           # Utility modules
 │   │       └── email_formatter.py           # Email formatting utilities
-│   ├── sandbox/                             # Experimental code
-│   │   ├── news/                            # News-related experiments
-│   │   │   ├── agno_experiment.py           # Agno experiment
-│   │   │   ├── custom_news_api_tool.py      # Custom news API tool
-│   │   │   └── hf_llm/                      # Hugging Face LLM experiments
-│   │   │       ├── llama_huggingface.py     # Llama model integration
-│   │   │       ├── sentiment_analysis.py    # Sentiment analysis
-│   │   │       └── summarization.py         # Text summarization
-│   │   └── stock_prices/                    # Stock price experiments
-│   │       ├── price_change_detection.py    # Price change detection logic
-│   │       └── test_price_detection.py      # Price detection tests
-│   ├── tests/                               # Test files
-│   │   ├── test_email_credentials.py        # Email credentials tests
-│   │   └── test_local.py                    # Local testing script
+│   ├── sandbox/                             # Experimental code (not tracked)
+│   ├── tests/                               # Test files (not tracked)
 │   ├── venv/                                # Python virtual environment
 │   ├── config.py                            # Application configuration
 │   ├── job_runner.py                        # Job execution runner
+│   ├── preview_newsletter.py                # Newsletter preview generator
 │   ├── requirements.txt                     # Production dependencies
 │   ├── requirements-dev.txt                 # Development dependencies
 │   ├── README.md                            # App-specific README
