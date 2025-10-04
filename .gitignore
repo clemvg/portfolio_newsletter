@@ -19,3 +19,7 @@ crash.log
 # IDEs
 .vscode/
 .idea/
+
+# Folders
+/sandbox/
+/tests/
