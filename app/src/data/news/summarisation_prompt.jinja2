@@ -1,0 +1,22 @@
+Below is raw information retrieved from the web about {{ company_name }}:
+
+{{ raw_info }}
+
+Your task: Summarize this information into a maximum of 5 bullet points covering the most important events and news.
+
+Guidelines:
+- Include: upcoming events (earnings dates, product launches, executive changes), recent news (stock-moving events, partnerships, corporate actions)
+- Avoid: analyst ratings/opinions, detailed financial metrics, rumors
+- Style: concise, no capital letters at start, no periods at end, no company name repetition
+
+If there's not enough pertinent information, return an empty array. 
+You do not need to specify in your bullet points that information about a particular topic is unavailable; simply return fewer bullet points if necessary.
+
+Return your response as JSON with this structure:
+{
+  "bullets": [
+    "shows strong market performance in recent trading sessions",
+    "announces new strategic partnership with major tech company",
+    "reports better-than-expected Q3 earnings results"
+  ]
+}

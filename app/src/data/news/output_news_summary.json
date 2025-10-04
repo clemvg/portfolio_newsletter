@@ -1,0 +1,30 @@
+{
+  "AAPL": [
+    "strong iphone sales and services revenue growth drove q4 earnings beat",
+    "unveiled comprehensive ai integration plans across its ecosystem",
+    "shares climbed in after-hours trading following better-than-expected quarterly results",
+    "announces new ai integration plans",
+    "strong q4 earnings beat expectations"
+  ],
+  "MSFT": [
+    "cloud revenue growth exceeds expectations",
+    "announces significant ai infrastructure expansion and new features",
+    "shares hit record levels on cloud growth",
+    "unveils plans for major ai investment",
+    "reports strong q4 cloud revenue growth"
+  ],
+  "GOOGL": [
+    "cloud revenue grows significantly in latest quarter",
+    "google cloud division competes strongly with aws and microsoft azure",
+    "quarterly revenue beats wall street estimates due to robust advertising and cloud growth",
+    "earnings date and quarterly results announced",
+    "google parent beats revenue estimates"
+  ],
+  "TSLA": [
+    "delivers record number of vehicles in q4",
+    "unveils next-generation battery technology",
+    "shares show mixed trading following production update",
+    "announces record quarterly deliveries",
+    "reveals breakthrough battery technology promising longer range and faster charging times"
+  ]
+}

@@ -1,0 +1,14 @@
+Need to finish news: use 3 apis (py files empty)
+Input and output format of the LLM_HF_summariser is fine, also rendering in news letter is fine! 
+
+Note that use_llm in news_data is set to true and python preview_newsletter.py can be used to do a newsletter simmulation
+
+Next steps: 
+
+Error handling (a.o. need to add some errros/tickers length checks)
+Double checks of information/multiple API 
+Agno framework experimentations?
+Opmaak newsletter?
+Unit tes?
+Replace print by log
+Update the ReadME

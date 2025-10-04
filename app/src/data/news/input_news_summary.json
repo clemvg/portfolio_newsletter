@@ -1,0 +1,22 @@
+{
+  "AAPL": {
+    "company_name": "Apple Inc.",
+    "raw_info": "Apple Reports Strong Q4 Earnings Beat Expectations. Apple Inc. reported fourth-quarter earnings that exceeded Wall Street expectations, driven by strong iPhone sales and services revenue growth. Apple Announces New AI Integration Plans. Apple unveiled comprehensive AI integration plans across its ecosystem, including enhanced Siri capabilities and machine learning features. Apple Stock Rises on Earnings Beat. Apple shares climbed in after-hours trading following better-than-expected quarterly results and optimistic guidance.",
+    "TICKERS": "AAPL,MSFT,GOOGL,TSLA"
+  },
+  "MSFT": {
+    "company_name": "Microsoft Corporation",
+    "raw_info": "Microsoft Cloud Revenue Exceeds Expectations in Q4. Microsoft reported strong cloud revenue growth, with Azure continuing to gain market share. Microsoft Announces Major AI Investment. Microsoft unveiled plans for significant AI infrastructure expansion and new AI-powered features across its product suite. Microsoft Stock Reaches New High on Cloud Growth. Microsoft shares hit record levels as investors react positively to robust cloud business performance.",
+    "TICKERS": "AAPL,MSFT,GOOGL,TSLA"
+  },
+  "GOOGL": {
+    "company_name": "Alphabet Inc.",
+    "raw_info": "Alphabet Sees Cloud Revenue Surge in Latest Quarter. Alphabet Google Cloud division posted significant revenue growth, competing strongly with AWS and Microsoft Azure. Google Parent Alphabet Beats Revenue Estimates. Alphabet Inc reported quarterly revenue that beat Wall Street estimates, powered by robust advertising and cloud growth.",
+    "TICKERS": "AAPL,MSFT,GOOGL,TSLA"
+  },
+  "TSLA": {
+    "company_name": "Tesla Inc.",
+    "raw_info": "Tesla Delivers Record Number of Vehicles in Q4. Tesla announced record quarterly deliveries, exceeding analyst expectations despite supply chain challenges. Tesla Unveils Next-Generation Battery Technology. Tesla revealed breakthrough battery technology promising longer range and faster charging times for future vehicles. Tesla Stock Volatile Following Production Update. Tesla shares showed mixed trading following the company's latest production and delivery numbers.",
+    "TICKERS": "AAPL,MSFT,GOOGL,TSLA"
+  }
+}

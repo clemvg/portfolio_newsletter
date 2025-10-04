@@ -1,6 +1,8 @@
 from datetime import datetime
 import pandas as pd
 
+# TODO: check tickers for metrics and news are the same !
+
 def create_newsletter_content(tickers: list[str]) -> str:
     """Create the newsletter content with news and metrics."""
     import sys
