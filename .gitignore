@@ -21,5 +21,6 @@ crash.log
 .idea/
 
 # Folders
-/sandbox/
-/tests/
+sandbox/
+tests/
+update.txt
